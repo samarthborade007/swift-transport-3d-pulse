@@ -2,41 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* SWIFT TRANSPORT Design System - Premium Logistics Theme
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Dark Transport Theme */
+    --background: 222 84% 4.9%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 222 84% 6%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 222 84% 6%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
+    /* Electric Blue Primary */
+    --primary: 199 89% 48%;
     --primary-foreground: 210 40% 98%;
+    --primary-glow: 199 89% 55%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Crimson Accent */
+    --crimson: 348 83% 47%;
+    --crimson-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 40% 98%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
 
-    --destructive: 0 84.2% 60.2%;
+    --accent: 217 32% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 348 83% 47%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 199 89% 48%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom Transport Colors */
+    --charcoal: 222 84% 4.9%;
+    --charcoal-light: 222 84% 8%;
+    --steel: 220 13% 18%;
+    --steel-light: 220 13% 22%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--charcoal)), hsl(var(--steel)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--steel-light)));
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-crimson: linear-gradient(135deg, hsl(var(--crimson)), hsl(348 83% 55%));
+    
+    /* Shadows & Glows */
+    --shadow-premium: 0 25px 50px -12px hsl(var(--charcoal) / 0.8);
+    --shadow-card: 0 20px 40px -8px hsl(var(--charcoal) / 0.6);
+    --glow-primary: 0 0 40px hsl(var(--primary) / 0.3);
+    --glow-crimson: 0 0 40px hsl(var(--crimson) / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-spring: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +129,93 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Premium Transport Components */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+  
+  .primary-gradient {
+    background: var(--gradient-primary);
+  }
+  
+  .crimson-gradient {
+    background: var(--gradient-crimson);
+  }
+
+  .shadow-premium {
+    box-shadow: var(--shadow-premium);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+  
+  .glow-crimson {
+    box-shadow: var(--glow-crimson);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-spring {
+    transition: var(--transition-spring);
+  }
+
+  /* 3D Transform Effects */
+  .transform-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .hover-lift {
+    @apply transition-spring;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-8px) rotateX(2deg);
+  }
+
+  /* Scroll Animations */
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Counter Animation */
+  .counter {
+    @apply font-bold text-2xl md:text-3xl;
+  }
+
+  /* Mesh Gradient Background */
+  .mesh-gradient {
+    background: radial-gradient(circle at 20% 80%, hsl(var(--primary) / 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, hsl(var(--crimson) / 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, hsl(var(--primary) / 0.1) 0%, transparent 50%);
   }
 }
