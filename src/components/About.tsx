@@ -1,7 +1,9 @@
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Award, Target, Users, Lightbulb, Heart, Shield } from 'lucide-react';
+import { Award, Target, Users, Lightbulb, Heart, Shield, Quote } from 'lucide-react';
 import warehouseImage from '@/assets/warehouse-3d.jpg';
+import anandBorade from '@/assets/anand-borade.jpg';
+import forbesFeature from '@/assets/forbes-feature.jpg';
 
 const About = () => {
   const values = [
@@ -51,7 +53,53 @@ const About = () => {
           </p>
         </div>
 
-        {/* Main About Section */}
+        {/* Founder Section */}
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+          {/* Left Content */}
+          <div className="space-y-8 animate-fade-in-up">
+            <div>
+              <Badge variant="outline" className="mb-4 p-2 border-primary/30 text-primary">
+                <Award className="h-4 w-4 mr-2" />
+                Founder & Proprietor
+              </Badge>
+              <h3 className="text-3xl font-bold text-foreground mb-6">
+                Anand Shamrao Borade
+              </h3>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                Founded SWIFT TRANSPORT with a vision to revolutionize logistics in Maharashtra. Under his leadership, the company has grown to become one of the most trusted transport partners in the region.
+              </p>
+              
+              {/* Testimony */}
+              <div className="card-gradient p-6 rounded-2xl border border-border/50 bg-background/50">
+                <Quote className="h-8 w-8 text-primary mb-4" />
+                <blockquote className="text-lg italic text-foreground leading-relaxed mb-4">
+                  "When I started SWIFT TRANSPORT over 20 years ago, my vision was simple - to provide reliable, efficient transport solutions that businesses could depend on. Today, seeing our team of 150+ professionals serve clients across Maharashtra fills me with immense pride. We don't just move goods; we move dreams, aspirations, and the wheels of commerce that drive India forward."
+                </blockquote>
+                <cite className="text-primary font-semibold">- Anand Shamrao Borade, Founder & Proprietor</cite>
+              </div>
+            </div>
+          </div>
+
+          {/* Right - Founder Photo */}
+          <div className="relative animate-zoom-in" style={{ animationDelay: '0.2s' }}>
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-crimson/20 rounded-3xl blur-2xl transform rotate-6"></div>
+              <div className="relative card-gradient p-1 rounded-3xl shadow-premium hover-lift">
+                <img
+                  src={anandBorade}
+                  alt="Anand Shamrao Borade - Founder & Proprietor of SWIFT TRANSPORT"
+                  className="w-full h-96 object-cover rounded-3xl"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent rounded-b-3xl p-6">
+                  <h4 className="text-xl font-bold text-foreground mb-1">Anand Shamrao Borade</h4>
+                  <p className="text-primary font-medium">Founder & Proprietor</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Company Overview */}
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           {/* Left Content */}
           <div className="space-y-8 animate-fade-in-up">
@@ -64,7 +112,7 @@ const About = () => {
                 Building India's Logistics Future
               </h3>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Founded by <span className="text-primary font-semibold">Anand Shamrao Borade</span>, SWIFT TRANSPORT has grown from a vision to become one of Maharashtra's most trusted logistics partners. Under the leadership of CFO <span className="text-primary font-semibold">Dhruv Anand Borade</span>, we continue to innovate and expand our services.
+                SWIFT TRANSPORT has grown from a vision to become one of Maharashtra's most trusted logistics partners. Under the leadership of CFO <span className="text-primary font-semibold">Dhruv Anand Borade</span>, we continue to innovate and expand our services.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 Our business model increases agility, reduces overhead, and maximizes customer satisfaction through strategic partnerships and cutting-edge technology integration.
@@ -111,8 +159,8 @@ const About = () => {
         {/* COVID Story Feature */}
         <div className="mb-20 animate-fade-in-up">
           <div className="card-gradient p-8 lg:p-12 rounded-3xl shadow-premium border border-border/50 hover:border-primary/30 transition-smooth">
-            <div className="flex flex-col lg:flex-row gap-8 items-center">
-              <div className="flex-1">
+            <div className="grid lg:grid-cols-3 gap-8 items-center">
+              <div className="lg:col-span-2">
                 <div className="flex items-center gap-3 mb-4">
                   <Badge className="bg-red-500/10 text-red-400 border-red-500/30">
                     <Award className="h-4 w-4 mr-2" />
@@ -128,8 +176,18 @@ const About = () => {
                 </p>
               </div>
               <div className="flex-shrink-0">
-                <div className="w-24 h-24 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center glow-crimson">
-                  <Award className="h-12 w-12 text-white" />
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-red-600/20 rounded-2xl blur-xl"></div>
+                  <img
+                    src={forbesFeature}
+                    alt="Forbes India COVID-19 Heroes Feature"
+                    className="relative w-full h-64 object-cover rounded-2xl shadow-lg hover-lift"
+                  />
+                  <div className="absolute top-4 right-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center glow-crimson">
+                      <Award className="h-6 w-6 text-white" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
