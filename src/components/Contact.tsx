@@ -18,12 +18,21 @@ const Contact = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Create email content
+    const emailSubject = `Quote Request from ${formData.name}`;
+    const emailBody = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0ACompany: ${formData.company}%0D%0AService: ${formData.service}%0D%0AMessage: ${formData.message}`;
+    
+    // Open email client
+    window.open(`mailto:itsmedhruv418@gmail.com?subject=${emailSubject}&body=${emailBody}`);
+    
     toast({
       title: "Quote Request Sent!",
-      description: "Our team will contact you within 24 hours.",
+      description: "Email client opened. Our team will contact you within 24 hours.",
     });
+    
     setFormData({
       name: '',
       email: '',
@@ -54,7 +63,7 @@ const Contact = () => {
     {
       icon: <MapPin className="h-6 w-6" />,
       title: 'Locations',
-      details: ['Bhandup, Mumbai', 'Thane, Maharashtra'],
+      details: ['Goregaon East, Mumbai', 'Thane, Maharashtra'],
       action: 'Get Directions'
     },
     {
@@ -238,20 +247,22 @@ const Contact = () => {
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-foreground mb-4">Our Locations</h3>
             <p className="text-xl text-muted-foreground">
-              Visit our offices in Mumbai and Thane for in-person consultations
+              Visit our office in Goregaon East, Mumbai for in-person consultations
             </p>
           </div>
 
           <div className="card-gradient p-1 rounded-3xl shadow-premium">
-            <div className="bg-muted/20 h-96 rounded-3xl flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="h-16 w-16 text-primary mx-auto mb-4" />
-                <h4 className="text-xl font-bold text-foreground mb-2">Interactive Map</h4>
-                <p className="text-muted-foreground">
-                  Embedded Google Maps showing our office locations
-                </p>
-              </div>
-            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.0!2d72.8777!3d19.1632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7a2be5e0d07%3A0x4c6b5e5e5e5e5e5e!2sGoregaon%20East%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1610000000000!5m2!1sen!2sin"
+              width="100%"
+              height="384"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="rounded-3xl"
+              title="SWIFT TRANSPORT Office Location - Goregaon East, Mumbai"
+            ></iframe>
           </div>
         </div>
       </div>

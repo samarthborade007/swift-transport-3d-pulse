@@ -106,13 +106,6 @@ const Services = () => {
                   ))}
                 </ul>
 
-                {/* Learn More Button */}
-                <Button 
-                  variant="outline" 
-                  className="w-full group-hover:border-primary group-hover:text-primary transition-smooth"
-                >
-                  Learn More
-                </Button>
               </div>
             </div>
           ))}
@@ -126,10 +119,17 @@ const Services = () => {
               Our team of logistics experts can design a tailored solution that perfectly fits your business requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="primary-gradient hover-lift glow-primary">
+              <Button 
+                className="primary-gradient hover-lift glow-primary"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 Get Custom Quote
               </Button>
-              <Button variant="outline" className="hover-lift">
+              <Button 
+                variant="outline" 
+                className="hover-lift"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 Schedule Consultation
               </Button>
             </div>
