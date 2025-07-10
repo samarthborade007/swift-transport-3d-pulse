@@ -116,8 +116,7 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
                 <div>
-                  <div className="text-foreground">Bhandup, Mumbai</div>
-                  <div className="text-foreground">Thane, Maharashtra</div>
+                  <div className="text-foreground">Goregaon East, Mumbai</div>
                 </div>
               </div>
             </div>
@@ -154,7 +153,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-center md:text-left">
               <p className="text-muted-foreground text-sm">
-                © 2024 SWIFT TRANSPORT. All rights reserved.
+                1995 SWIFT TRANSPORT. 
               </p>
               <p className="text-primary text-sm font-medium">
                 "Swift Delivery. Trusted Journey."

@@ -11,7 +11,7 @@ const Clients = () => {
   const testimonials = [
     {
       company: 'LG India',
-      text: 'SWIFT TRANSPORT has been our reliable logistics partner for over 5 years. Their commitment to timely delivery is unmatched.',
+      text: 'SWIFT TRANSPORT has been our reliable logistics partner for over 25+ years. Their commitment to timely delivery is unmatched.',
       rating: 5
     },
     {
@@ -20,7 +20,7 @@ const Clients = () => {
       rating: 5
     },
     {
-      company: 'Lifestyle International',
+      company: 'Vijay Sales (India) Private Limited',
       text: 'Their real-time tracking system and customer support have transformed our supply chain efficiency.',
       rating: 5
     }

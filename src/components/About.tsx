@@ -73,7 +73,7 @@ const About = () => {
               <div className="card-gradient p-6 rounded-2xl border border-border/50 bg-background/50">
                 <Quote className="h-8 w-8 text-primary mb-4" />
                 <blockquote className="text-lg italic text-foreground leading-relaxed mb-4">
-                  "When I started SWIFT TRANSPORT over 20 years ago, my vision was simple - to provide reliable, efficient transport solutions that businesses could depend on. Today, seeing our team of 150+ professionals serve clients across Maharashtra fills me with immense pride. We don't just move goods; we move dreams, aspirations, and the wheels of commerce that drive India forward."
+                  "When I started SWIFT TRANSPORT over 30 years ago, my vision was simple - to provide reliable, efficient transport solutions that businesses could depend on. Today, seeing our team of 150+ professionals serve clients across Maharashtra fills me with immense pride. We don't just move goods; we move dreams, aspirations, and the wheels of commerce that drive India forward."
                 </blockquote>
                 <cite className="text-primary font-semibold">- Anand Shamrao Borade, Founder & Proprietor</cite>
               </div>
