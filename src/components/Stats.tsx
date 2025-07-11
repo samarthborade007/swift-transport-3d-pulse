@@ -80,7 +80,7 @@ const Stats = () => {
     },
     {
       icon: <Calendar className="h-8 w-8 text-white" />,
-      value: 20,
+      value: 30,
       suffix: '+',
       label: 'Years of Service',
       delay: 400

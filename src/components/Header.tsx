@@ -51,7 +51,7 @@ const Header = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-primary-glow transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
-            <Button variant="outline" className="hover-lift">
+            <Button variant="outline" className="hover-lift" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
               Get Quote
             </Button>
           </nav>

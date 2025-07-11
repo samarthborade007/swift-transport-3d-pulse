@@ -74,7 +74,7 @@ const Hero = () => {
             {/* Company Legacy */}
             <div className="pt-8 border-t border-border/50">
               <p className="text-sm text-muted-foreground">
-                <span className="text-primary font-semibold">20+ years</span> of excellence in logistics • 
+                <span className="text-primary font-semibold">30+ years</span> of excellence in logistics • 
                 Founded by <span className="text-foreground font-medium">Anand Shamrao Borade</span>
               </p>
             </div>

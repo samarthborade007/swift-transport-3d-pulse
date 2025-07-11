@@ -3,9 +3,9 @@ import { Award, Star, TrendingUp } from 'lucide-react';
 
 const Clients = () => {
   const clients = [
-    'LG India', 'Videocon', 'Onida', 'Philips', 'Colgate Palmolive',
+    'LG India', 'Bluestar', 'Onida', 'Vijay Sales', 'Colgate Palmolive',
     'Capital Foods', 'Ipca Pharma', 'Lifestyle Int.', 'TCL', 'Shreya Life Sciences',
-    'Godrej', 'Mahindra', 'Bajaj', 'Reliance', 'Tata Motors'
+    'Godrej', 'Mahindra', 'Bajaj', 'Reliance', 'Voltas'
   ];
 
   const testimonials = [

@@ -106,7 +106,7 @@ const About = () => {
             <div>
               <Badge variant="outline" className="mb-4 p-2 border-primary/30 text-primary">
                 <Award className="h-4 w-4 mr-2" />
-                20+ Years of Excellence
+                30+ Years of Excellence
               </Badge>
               <h3 className="text-3xl font-bold text-foreground mb-6">
                 Building India's Logistics Future
@@ -135,9 +135,7 @@ const About = () => {
               </div>
             </div>
 
-            <Button className="primary-gradient hover-lift glow-primary">
-              Learn Our Story
-            </Button>
+     
           </div>
 
           {/* Right Image */}
@@ -178,11 +176,18 @@ const About = () => {
               <div className="flex-shrink-0">
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-red-600/20 rounded-2xl blur-xl"></div>
-                  <img
-                    src={forbesFeature}
-                    alt="Forbes India COVID-19 Heroes Feature"
-                    className="relative w-full h-64 object-cover rounded-2xl shadow-lg hover-lift"
-                  />
+<a
+  href="https://www.forbesindia.com/article/coronavirus/covid19-meet-those-who-are-lending-a-helping-hand/59905/1"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <img
+    src={forbesFeature}
+    alt="Forbes India COVID-19 Heroes Feature"
+    className="relative w-full h-64 object-cover rounded-2xl shadow-lg hover-lift"
+  />
+</a>
+
                   <div className="absolute top-4 right-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center glow-crimson">
                       <Award className="h-6 w-6 text-white" />
